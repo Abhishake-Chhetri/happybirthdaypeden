@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Surprise!</title>
+    <title>Happy Birthday Peden!</title>
     <style>
         body {
             text-align: center;
@@ -15,55 +15,42 @@
             align-items: center;
             height: 100vh;
         }
-        .button {
-            background-color: #ff4081;
-            color: white;
-            padding: 15px 30px;
-            font-size: 20px;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-    </style>
-</head>
-<body>
-    <h1>Click here for a surprise!</h1>
-    <button class="button" onclick="location.href='birthday.html'">Click Here</button>
-</body>
-</html>
-
-<!-- Birthday Page -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Happy Birthday Peden!</title>
-    <style>
-        body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            background-color: #ffe4e1;
+        .collage {
             display: flex;
-            flex-direction: column;
+            flex-wrap: wrap;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            gap: 10px;
         }
-        h1 {
-            color: #ff4081;
-        }
-        img {
-            width: 300px;
-            border-radius: 15px;
-            margin-top: 20px;
+        .collage img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
+        .poem {
+            margin-top: 20px;
+            font-size: 20px;
+            color: #ff4081;
+        }
     </style>
 </head>
 <body>
-    <h1>Happy Birthday Peden! 🎉🎂</h1>
-    <img src="image.png" alt="Peden's Photo">
+    <div class="collage">
+        <img src="1.png" alt="Photo 1">
+        <img src="2.png" alt="Photo 2">
+        <img src="3.png" alt="Photo 3">
+        <img src="4.png" alt="Photo 4">
+    </div>
+    <div class="poem">
+        <p>On your birthday, joy and cheer,</p>
+        <p>Smiles and laughter, love sincere.</p>
+        <p>Wishing you dreams bright and true,</p>
+        <p>Happiness in all you do!</p>
+        <p>Though miles apart, my heart is near,</p>
+        <p>A gift I can't give, but love sincere.</p>
+        <p>Through every moment, far or wide,</p>
+        <p>I'm always here, right by your side.</p>
+    </div>
 </body>
 </html>
