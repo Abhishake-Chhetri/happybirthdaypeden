@@ -14,6 +14,7 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
+            overflow: hidden;
         }
         .collage {
             display: flex;
@@ -51,6 +52,24 @@
             max-width: 600px;
             border-radius: 10px;
         }
+        .poem {
+            font-size: 1.2em;
+            color: #ff4081;
+            margin-top: 20px;
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            animation: rise 5s linear infinite;
+        }
+        @keyframes rise {
+            0% { transform: translateY(100vh); opacity: 1; }
+            100% { transform: translateY(-10vh); opacity: 0; }
+        }
+        .cake {
+            width: 200px;
+            margin-top: 20px;
+        }
     </style>
     <script>
         function enlargeImage(src) {
@@ -62,6 +81,18 @@
         function closeFullscreen() {
             document.getElementById('fullscreen').style.display = 'none';
         }
+        function createBalloons() {
+            for (let i = 0; i < 15; i++) {
+                let balloon = document.createElement('img');
+                balloon.src = 'balloon.png';
+                balloon.className = 'balloon';
+                balloon.style.left = Math.random() * 100 + 'vw';
+                balloon.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                document.body.appendChild(balloon);
+                setTimeout(() => balloon.remove(), 5000);
+            }
+        }
+        setInterval(createBalloons, 1000);
     </script>
 </head>
 <body>
@@ -79,10 +110,13 @@
         <p>Though miles apart, my heart is near,</p>
         <p>A gift I can't give, but love sincere.</p>
         <p>Through every moment, far or wide,</p>
-        <p>I'm always here, right by your side.</p>
+        <p>I'm always here, right by your side.🫂</p>
+         <p>Happy Birthday Pedenla.❤️</p>
     </div>
+    <img src="cake.png" alt="Birthday Cake" class="cake">
     <div id="fullscreen" class="fullscreen" onclick="closeFullscreen()">
         <img id="fullscreen-img" src="" alt="Fullscreen Image">
     </div>
 </body>
 </html>
+
